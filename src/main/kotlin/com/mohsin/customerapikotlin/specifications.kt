@@ -7,7 +7,7 @@ import javax.persistence.criteria.Predicate
 object MovieSpecification{
 
     fun filterMovie(name : String? = null , pays : String?=null , year : Int? = null
-        ,language: String? = null , category: Category?
+        ,language: String? = null , category: Category? = null
     ) : Specification<Movie>{
         return Specification { root, _, builder ->
                 val predicates = mutableListOf<Predicate>()
